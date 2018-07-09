@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM taewanme/ubuntu-java:latest
 MAINTAINER Taewan Kim <taewanme@gmail.com>
 
 RUN apt-get update \
@@ -34,10 +34,11 @@ RUN pip3 install xlrd            \
  && pip3 install jupyter         \
  && pip3 install beautifulsoup4  \
  && pip3 install keras           \
- && pip3 install http://download.pytorch.org/whl/cpu/torch-0.3.1-cp35-cp35m-linux_x86_64.whl  \
- && pip3 install torchvision     \
- && pip3 install --upgrade tensorflow
- 
+ && pip3 install http://download.pytorch.org/whl/cpu/torch-0.4.0-cp35-cp35m-linux_x86_64.whl \
+ && pip3 install torchvision      \
+ && pip3 install --upgrade tensorflow \
+ && pip3 install mglearn
+
 RUN mkdir -p /root/.jupyter/
 COPY jupyter_notebook_config.py /root/.jupyter/
 
