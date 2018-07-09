@@ -14,5 +14,9 @@
 
 # changed log
 - 2018.07.06
+  - adding library - mglearn
+  - version: 0.1.03
+
+- 2018.07.06
   - initial image
   - version: 0.1.01
